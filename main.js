@@ -277,28 +277,163 @@ let itemList = document.querySelector('#items');
 let newDiv = document.createElement('div');
 
 // Add a class to the div
-newDiv.className = 'hello';
+// newDiv.className = 'hello';
 
-// Add an id to the div
-newDiv.id = 'hello1';
+// // Add an id to the div
+// newDiv.id = 'hello1';
 
-// Adds a title attribute with the value 'Hello Div' to the div.
-newDiv.setAttribute('title', 'Hello Div');
+// // Adds a title attribute with the value 'Hello Div' to the div.
+// newDiv.setAttribute('title', 'Hello Div');
 
-// Create a text node
-let newDivText = document.createTextNode('Hello World');
+// // Create a text node
+// let newDivText = document.createTextNode('Hello World');
 
-// Add the text node newDivText to the div.
-newDiv.appendChild(newDivText);
+// // Add the text node newDivText to the div.
+// newDiv.appendChild(newDivText);
 
-// Creates a variable 'container' and assigns the selected class '.container' in the header tag to it.
-let container = document.querySelector('header .container');
+// // Creates a variable 'container' and assigns the selected class '.container' in the header tag to it.
+// let container = document.querySelector('header .container');
 
-// Creates a variable 'h1' and assigns the selected HTML element h1 in the header tag to it.
-let h1 = document.querySelector('header h1');
+// // Creates a variable 'h1' and assigns the selected HTML element h1 in the header tag to it.
+// let h1 = document.querySelector('header h1');
 
-// Logs the created div in the console.
-console.log(newDiv);
+// // Logs the created div in the console.
+// console.log(newDiv);
 
-// Inserts the newDiv variable before the h1 variable inside the container variable in the document.
-container.insertBefore(newDiv, h1);
+// // Inserts the newDiv variable before the h1 variable inside the container variable in the document.
+// container.insertBefore(newDiv, h1);
+
+// PART 3//
+
+// EVENTS //
+
+// let btn = document.getElementById('button').addEventListener('click', buttonClick);
+
+// This function logs the following into the console and changes the css background style of the element with the id
+// main to light grey and changes the text content of the element with the id 'header-title' to "Changed" 
+/*
+function buttonClick(e){
+    // console.log('Button clicked');
+
+    // document.getElementById('header-title').textContent =
+    // 'Changed';
+
+    // document.getElementById('main').style.backgroundColor = 
+    // '#f3f3f3';
+
+    // Logs the event into the console
+    // console.log(e);
+
+    // Logs the event target into the console
+    // console.log(e.target);
+
+    // Logs the event target id into the console
+    // console.log(e.target.id);
+
+    // Logs the event target class name into the console
+    // console.log(e.target.className);
+
+    // Logs the event target class list into the console
+    // console.log(e.target.classList);
+
+    // let output = document.getElementById('output');
+
+    // Displays the event target id on the document 
+    // output.innerHTML = '<h3>'+e.target.id+'</h3>'
+
+    // Logs the event type into the console
+    // console.log(e.type);
+
+    // Logs the horizontal point of the event from the browser
+    // console.log(e.clientX);
+
+    // Logs the vertical point of the event from the browser
+    // console.log(e.clientY);
+
+    // Logs the horizontal point of the event from the element
+    // console.log(e.offsetX);
+
+    // Logs the vertical point of the event from the element
+    // console.log(e.offsetY);
+
+    // Logs true into the console is the altkey is clicked
+    // console.log(e.altKey);
+
+    // Logs true into the console is the ctrlkey is clicked
+    // console.log(e.ctrlKey);
+
+    // Logs true into the console is the shiftkey is clicked
+    // console.log(e.shiftKey);
+}
+*/
+
+let btn = document.getElementById('button');
+
+// Event fires on click
+// btn.addEventListener('click', runEvent);
+
+// Event fires on click
+// btn.addEventListener('dblclick', runEvent);
+// btn.addEventListener('mouseup', runEvent);
+// btn.addEventListener('mousedown', runEvent);
+
+let box = document.getElementById('box');
+let output = document.getElementById('output');
+
+// event fires off when the mouse enters the box element
+// box.addEventListener('mouseenter', runEvent);
+
+// event fires off when the mouse leaves the box element
+// or moves out of a child element in the box element
+// box.addEventListener('mouseleave', runEvent);
+
+// event fires off when the mouse leaves the box event 
+// box.addEventListener('mouseout', runEvent);
+
+// event fires off when the mouse enters the box event 
+// or hovers over a child element in the box element
+// box.addEventListener('mouseover', runEvent);
+
+// event fires off when the mouse moves in the box element
+// box.addEventListener('mousemove', runEvent);
+let itemInput = document.querySelector('input[type="text"]');
+let form = document.querySelector('form');
+
+// KEY EVENTS //
+
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keyup', runEvent);
+// itemInput.addEventListener('keypress', runEvent);
+
+// itemInput.addEventListener('focus', runEvent);
+// itemInput.addEventListener('blur', runEvent);
+
+// itemInput.addEventListener('cut', runEvent);
+// itemInput.addEventListener('paste', runEvent);
+
+// itemInput.addEventListener('input', runEvent);
+
+let select = document.querySelector('select');
+
+// select.addEventListener('change', runEvent);
+// select.addEventListener('input', runEvent);
+
+form.addEventListener('submit', runEvent);
+
+function runEvent(e){
+    e.preventDefault();
+    console.log('Event Type: '+e.type); 
+    
+    // logs the keys being inputted in the input form into the console
+    //console.log(e.target.value);
+
+   // output.innerHTML = '<h3>'+e.target.value+'</h3>';
+
+    // output.innerHTML = '<h3>MouseX: '+e.offsetX+ 
+    // '</h3><h3>MouseY: ' +e.offsetY+ '</h3>';
+
+    // box.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 40)";
+
+    // document.body.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 40)";
+
+}
